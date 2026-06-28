@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        int i=0;
+        bool dup=0;
+        while(i<s.length()){
+            dup=0;
+            int j=0;
+            while(j<s.length()){
+                if( i != j && s[i]==s[j]){
+                  dup=1;
+                    break;
+                }
+                else{
+                    j++;
+                }
+            }
+            if(dup==0){
+            return i;}
+             i++;
+        }
+       return -1; 
+    }
+};
